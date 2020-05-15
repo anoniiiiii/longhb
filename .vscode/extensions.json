@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "jpoissonnier.vscode-styled-components",
+    "mrmlnc.vscode-duplicate",
+    "kamikillerto.vscode-colorize",
+    "rebornix.project-snippets",
+    "formulahendry.code-runner",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "rbbit.typescript-hero"
+  ]
+}
