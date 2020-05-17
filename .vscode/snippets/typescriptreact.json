@@ -1,0 +1,269 @@
+{
+  "Disable eslint": {
+    "prefix": "esd",
+    "body": ["/* eslint-disable */"]
+  },
+  "Import Antd": {
+    "prefix": "impa",
+    "body": ["import { $1 } from \"antd\";"]
+  },
+  "Import Styled Components": {
+    "prefix": "imps",
+    "body": ["import styled from \"styled-components\";"]
+  },
+  "Import Flow Type": {
+    "prefix": "impt",
+    "body": ["import type {$2} from \"${1:./types}\";"]
+  },
+  "Import connect": {
+    "prefix": "impc",
+    "body": ["import { connect } from \"react-redux\";"]
+  },
+  "Import PropsTransform": {
+    "prefix": "imppt",
+    "body": ["import PropsTransform from \"../../addons/PropsTransform\";"]
+  },
+  "Import Export Index": {
+    "prefix": "impi",
+    "body": ["// @flow", "import $1 from \"./$1\";", "", "export default $1;"]
+  },
+  "PropsTransform.isPropsChanged": {
+    "prefix": "isPropsChanged",
+    "body": ["isPropsChanged: (props, nextProps) => props.$1 !== nextProps.$1,"]
+  },
+  "Import withRouter": {
+    "prefix": "impwr",
+    "body": ["import { withRouter } from \"react-router-dom\";"]
+  },
+  "Import React": {
+    "prefix": "impr",
+    "body": ["import React, { Component } from \"react\";"]
+  },
+  "React Get Props": {
+    "prefix": "rprops",
+    "body": ["const { $1 } = this.props;"]
+  },
+  "React Spec": {
+    "prefix": "rspec",
+    "body": [
+      "// @flow",
+      "import React from \"react\";",
+      "import ${1:$TM_FILENAME} from \"./${1:$TM_FILENAME}\";",
+      "",
+      "describe(\"${1:$TM_FILENAME}\", () => {",
+      "  it(\"could render without crashing\", () => {",
+      "    ${2|matchSnapShot,matchApexSnapshot|}(<$1 />);",
+      "  });",
+      "});"
+    ]
+  },
+  "React Story": {
+    "prefix": "rstory",
+    "body": [
+      "// @flow",
+      "import React from \"react\";",
+      "import { storiesOf } from \"@storybook/react\";",
+      "",
+      "import ${1:${TM_FILENAME_BASE/.stories//}} from \"./$1\";",
+      "",
+      "storiesOf(\"$1\", module)",
+      "  .add(\"$1\", () => (",
+      "    <$1 />",
+      "  ));"
+    ]
+  },
+  "React Component Old": {
+    "prefix": "rcomold",
+    "body": [
+      "// @flow",
+      "import React, { Component } from \"react\";",
+      "",
+      "type TProps = {",
+      "};",
+      "",
+      "type TState = {",
+      "};",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE/.stories//}} extends Component<TProps, TState> {",
+      "  render() {",
+      "    return <div>${2:${1} content go here}</div>;",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "Promise": {
+    "prefix": "npromise",
+    "body": ["new Promise((resolve, reject) => {", "  $1", "})"]
+  },
+  "React Function Component": {
+    "prefix": "rf",
+    "body": [
+      "import React, { FC } from \"react\";",
+      "",
+      "type TProps = {",
+      "};",
+      "",
+      "const ${1:${TM_FILENAME_BASE/.stories//}}: FC<TProps> = ({}) => {",
+      "  return <div>${2:${1:${TM_FILENAME_BASE/.stories//}} content go here}</div>;",
+      "}",
+      "",
+      "export default ${1}",
+      ""
+    ]
+  },
+  "New React Function Component": {
+    "prefix": "nrf",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE/.stories//}}: FC<{}> = ({}) => {",
+      "  return <div>${2:${1:${TM_FILENAME_BASE/.stories//}} content go here}</div>;",
+      "}"
+    ]
+  },
+  "React Class Component": {
+    "prefix": "rcom",
+    "body": [
+      "import React, { Component } from \"react\";",
+      "",
+      "type TProps = {",
+      "};",
+      "",
+      "type TState = {",
+      "};",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE/.stories//}} extends Component<TProps, TState> {",
+      "  render() {",
+      "    return <div>${2:${1} content go here}</div>;",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "NextJS Page": {
+    "prefix": "npage",
+    "body": [
+      "import React, { Component } from \"react\";",
+      "import { NextPageContext } from \"next\";",
+      "",
+      "type TProps = {",
+      "};",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE/.stories//}} extends Component<TProps> {",
+      "  static async getInitialProps(ctx: NextPageContext) {",
+      "    return {}",
+      "  }",
+      "",
+      "  render() {",
+      "    return <div>${2:${1} content go here}</div>;",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "Redux Component": {
+    "prefix": "rdcom",
+    "body": [
+      "import { connect } from \"react-redux\";",
+      "import React, { Component } from \"react\";",
+      "",
+      "type TProps = ReturnType<typeof mapStateToProps>;",
+      "",
+      "type TState = {};",
+      "",
+      "class ${1:${TM_FILENAME_BASE/.stories//}} extends Component<TProps, TState> {",
+      "  render() {",
+      "    return <div>${2:${1} content go here}</div>;",
+      "  }",
+      "}",
+      "",
+      "const mapStateToProps = (state: AppState) => {",
+      "  return {};",
+      "};",
+      "",
+      "export default connect(mapStateToProps)($1);"
+    ]
+  },
+  "Create Styled Components Container": {
+    "prefix": "sc",
+    "body": ["const $1 = styled.${2:div}`", "  $3", "`;"]
+  },
+  "Jest Describe": {
+    "prefix": "descr",
+    "body": ["describe(\"$1\", () => {", "  $2", "});"]
+  },
+  "Jest it": {
+    "prefix": "it",
+    "body": ["it(\"$1\", () => {", "  $2", "});"]
+  },
+  "React Constructor": {
+    "prefix": "rcons",
+    "body": [
+      "constructor(props: TProps) {",
+      "  super(props);",
+      "  ",
+      "  this.state = this.buildState(props);",
+      "  $1",
+      "}",
+      "",
+      "buildState = (props: TProps) => {",
+      "  return {",
+      "    $2",
+      "  };",
+      "}"
+    ]
+  },
+  "React buildState": {
+    "prefix": "rbs",
+    "body": [
+      "buildState = (props: TProps) => {",
+      "  return {",
+      "    $1",
+      "  };",
+      "}"
+    ]
+  },
+  "React componentWillMount": {
+    "prefix": "rcm",
+    "body": ["componentWillMount() {", "  $1", "}"]
+  },
+  "React componentWillReceiveProps": {
+    "prefix": "rcrp",
+    "body": ["componentWillReceiveProps(nextProps: TProps) {", "  $1", "}"]
+  },
+  "React shouldComponentUpdate": {
+    "prefix": "rsupd",
+    "body": [
+      "shouldComponentUpdate(nextProps: TProps, nextState: TState) {",
+      "  $1",
+      "}"
+    ]
+  },
+  "React mapStateToProps": {
+    "prefix": "mapStateToProps",
+    "body": [
+      "const mapStateToProps = (state: AppState) => {",
+      "  return {",
+      "    $1",
+      "  }",
+      "}"
+    ]
+  },
+  "React mapDispatchToProps": {
+    "prefix": "mapDispatchToProps",
+    "body": [
+      "const mapDispatchToProps = (dispatch: Function) => {",
+      "  return {",
+      "    $1",
+      "  }",
+      "}"
+    ]
+  },
+  "React Simple mapDispatchToProps": {
+    "prefix": "smapDispatchToProps",
+    "body": ["const mapDispatchToProps = {", "  $1", "}"]
+  },
+  "style jsx": {
+    "prefix": "sjsx",
+    "body": ["<style jsx>{`", "  $1", "`}</style>"]
+  }
+}

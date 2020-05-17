@@ -1,0 +1,58 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "javascript.validate.enable": false,
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    ".idea": true,
+    "build": true,
+    "src/build": true,
+    "admin/build": true,
+    "**/node_modules": true,
+    "flow-typed": true,
+    "**/*.min.js": true,
+    "storybook-static": true,
+    "npm-packages-offline-cache": true
+  },
+  "search.exclude": {
+    "src/build": true,
+    "**/node_modules": true,
+    "**/src/css": true,
+    "**/bower_components": true,
+    "**/storybook-static": true,
+    "**/flow-typed": true,
+    "npm-packages-offline-cache": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": ["./src"],
+  "eslint.autoFixOnSave": true,
+  "eslint.lintTask.enable": true,
+  "eslint.options": {
+    "configFile": "../.eslintrc.js"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true }
+  ],
+  "files.associations": {
+    "*.viz": "json"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["/*.viz"],
+      "url": "./schemas/viz.schema.json"
+    }
+  ],
+  "tslint.configFile": "src/tsconfig.json",
+  "tslint.ignoreDefinitionFiles": false,
+  "colorize.languages": ["javascript", "typescript", "typescriptreact", "less"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
