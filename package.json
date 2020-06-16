@@ -80,6 +80,7 @@
   },
   "scripts": {
     "start": "next dev",
+    "export": "next export",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
