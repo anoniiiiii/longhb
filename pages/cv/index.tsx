@@ -4,6 +4,7 @@ import LongAvatar from "./img/Long.png";
 import Tenpoint7Logo from "./img/Tenpoint7.png";
 import SmartOSCLogo from "./img/SmartOSC.jpeg";
 import PycoGroupLogo from "./img/PycoGroup.png";
+import GFTLogo from "./img/GFT.png";
 import { AimOutlined, PhoneOutlined, MailOutlined } from "@ant-design/icons";
 import Skill from "./Skill";
 import WorkExperience, { WorkExperienceEmpty } from "./WorkExperience";
@@ -56,12 +57,6 @@ export default class CVPage1 extends Component<TProps, TState> {
               <Skill name="GIT" strength={7}></Skill>
               <Skill name="AWS" strength={6}></Skill>
             </SkillInfo>
-            <SkillInfo>
-              <LeftTitle>English Skills</LeftTitle>
-              <Skill name="Communication" strength={6}></Skill>
-              <Skill name="Reading" strength={7}></Skill>
-              <Skill name="Writing" strength={7}></Skill>
-            </SkillInfo>
           </LeftSide>
           <RightSide>
             <RightTitle>Summary</RightTitle>
@@ -73,6 +68,19 @@ export default class CVPage1 extends Component<TProps, TState> {
               development and security.
             </p>
             <RightTitle>Work experience</RightTitle>
+            <WorkExperience position="Senior Developer" company="GFT Technologies" startDate="Jun 2020"
+                            endDate="Present" logo={<img src={GFTLogo}></img>}>
+              <ProjectExperience projectName="Mox Digital Bank (https://mox.com/)" techandtools="Python (Pandas, Pynum), AWS (S3, RDS, Athena), Kotlin (Spring), Terraform, Datadog, Airflow, Falcon, Feedzai">
+                <p>
+                  A virtual bank backed by Standard Chartered, in partnership with HKT, PCCW and Trip.com. We are the combined power of a well-trusted international banking group, the city’s telecom and lifestyle leader as well as Asia’s largest online travel agency. Mox delivers a suite of retail banking services and lifestyle benefits all in one place, growing your money, your world and your possibilities.
+                </p>
+                <ul>
+                  <li>Processing data in datalake for detect fraud and money laundering cases</li>
+                  <li>Implement APIs for risk checking</li>
+                  <li>Implement monitoring of logs for check cheating cases and system issue</li>
+                </ul>
+              </ProjectExperience>
+            </WorkExperience>
             <WorkExperience
               startDate="July 2019"
               endDate="Mar 2020"
@@ -103,21 +111,43 @@ export default class CVPage1 extends Component<TProps, TState> {
                     load.
                   </li>
                   <li>API (API Gateway, Lambda)</li>
-                  <li>Visualize data (Recharts, D3, ReactJS)</li>
+                  <li>Visualize data (Recharts, D3, React)</li>
                   <li>Custom and build UI library base on Ant Design UI</li>
                 </ul>
               </ProjectExperience>
             </WorkExperience>
+          </RightSide>
+        </PageA4>
+        <PageA4>
+          <LeftSide>
+            <SkillInfo>
+              <LeftTitle>English Skills</LeftTitle>
+              <Skill name="Communication" strength={6}></Skill>
+              <Skill name="Reading" strength={7}></Skill>
+              <Skill name="Writing" strength={7}></Skill>
+            </SkillInfo>
+            <SkillInfo>
+              <LeftTitle>Personal Skills</LeftTitle>
+              <Skill name="Creative" strength={8}></Skill>
+              <Skill name="Willingness to learn" strength={8}></Skill>
+              <Skill name="Teamwork" strength={7}></Skill>
+              <Skill name="Organization" strength={7}></Skill>
+              <Skill name="Leadership" strength={6}></Skill>
+              <Skill name="Handle pressure" strength={7}></Skill>
+              <Skill name="Flexibility" strength={8}></Skill>
+            </SkillInfo>
+          </LeftSide>
+          <RightSide>
             <WorkExperience
-              position="Senior Java"
-              startDate="Jan 2016"
-              endDate="Jun 2019"
-              company="SmartOSC"
-              logo={<img src={SmartOSCLogo} />}
+                position="Senior Java"
+                startDate="Jan 2016"
+                endDate="Jun 2019"
+                company="SmartOSC"
+                logo={<img src={SmartOSCLogo} />}
             >
               <ProjectExperience
-                projectName="Singapore Economic Development Board (EDB).(https://www.edb.gov.sg/)"
-                techandtools="AEM (AEM form, touchUI), OSGi, Jquery, Google Analytic, Adobe Analytic, JWT, Google 2-Step Verification, Bootstrap"
+                  projectName="Singapore Economic Development Board (EDB).(https://www.edb.gov.sg/)"
+                  techandtools="AEM (AEM form, touchUI), OSGi, Jquery, Google Analytic, Adobe Analytic, JWT, Google 2-Step Verification, Bootstrap"
               >
                 <p>
                   EDB is a government agency under the Ministry of Trade and
@@ -146,8 +176,8 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
               <ProjectExperience
-                projectName="Pham Nguyen Food"
-                techandtools="Apache Camel, RabitMQ, SpringBoot, Gmail API, JHipster, React, Nodejs, Expressjs, MySQL, Bootstrap, Regular expressions"
+                  projectName="Pham Nguyen Food"
+                  techandtools="Apache Camel, RabitMQ, SpringBoot, Gmail API, JHipster, React, Nodejs, Expressjs, MySQL, Bootstrap, Regular expressions"
               >
                 <p>
                   Pham Nguyen is a confectionery manufacturing company. Pham
@@ -170,22 +200,6 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
             </WorkExperience>
-          </RightSide>
-        </PageA4>
-        <PageA4>
-          <LeftSide>
-            <SkillInfo>
-              <LeftTitle>Personal Skills</LeftTitle>
-              <Skill name="Creative" strength={8}></Skill>
-              <Skill name="Willingness to learn" strength={8}></Skill>
-              <Skill name="Teamwork" strength={7}></Skill>
-              <Skill name="Organization" strength={7}></Skill>
-              <Skill name="Leadership" strength={6}></Skill>
-              <Skill name="Handle pressure" strength={7}></Skill>
-              <Skill name="Flexibility" strength={8}></Skill>
-            </SkillInfo>
-          </LeftSide>
-          <RightSide>
             <WorkExperienceEmpty>
               <ProjectExperience
                 projectName="Magento Ecommerce Chat Bot"
@@ -211,16 +225,20 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
             </WorkExperienceEmpty>
+          </RightSide>
+        </PageA4>
+        <PageA4>
+          <RightSide>
             <WorkExperience
-              startDate="Jan 2013"
-              endDate="Dec 2015"
-              company="PycoGroup"
-              position="Senior Java"
-              logo={<img src={PycoGroupLogo} />}
+                startDate="Jan 2013"
+                endDate="Dec 2015"
+                company="PycoGroup"
+                position="Senior Java"
+                logo={<img src={PycoGroupLogo} />}
             >
               <ProjectExperience
-                projectName="Godzilist V2"
-                techandtools="Nodejs, Expressjs, Angular, MongoDB"
+                  projectName="Godzilist V2"
+                  techandtools="Nodejs, Expressjs, Angular, MongoDB"
               >
                 <p>
                   Godzilist is a one-stop destination that gathers many
@@ -277,8 +295,8 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
               <ProjectExperience
-                projectName="PYCO GOVEMENT AEM RDS"
-                techandtools="AEM, Bootlstrap, Google Analytics, sling, OSGi"
+                  projectName="PYCO GOVEMENT AEM RDS"
+                  techandtools="AEM, Bootlstrap, Google Analytics, sling, OSGi"
               >
                 <p>
                   With PYCO GOVEMENT AEM RDS you can expect: Fully responsive
@@ -300,15 +318,10 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
             </WorkExperience>
-          </RightSide>
-        </PageA4>
-        <PageA4>
-          <LeftSide></LeftSide>
-          <RightSide>
             <WorkExperienceEmpty>
               <ProjectExperience
-                projectName="Pyco RDS"
-                techandtools="Hybris, Bootstrap, Jquery"
+                  projectName="Pyco RDS"
+                  techandtools="Hybris, Bootstrap, Jquery"
               >
                 <p>
                   PYCOGroup strategy for hybris is to try to bring in new kinds
@@ -338,8 +351,8 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
               <ProjectExperience
-                projectName="Microsoft China Store (https://www.microsoftstore.com.cn/)"
-                techandtools="Hybris, Google analytics, Bootstrap"
+                  projectName="Microsoft China Store (https://www.microsoftstore.com.cn/)"
+                  techandtools="Hybris, Google analytics, Bootstrap"
               >
                 <p>
                   Microsoft Corporation - Greater China Region GCR is a division
@@ -367,25 +380,29 @@ export default class CVPage1 extends Component<TProps, TState> {
                 </ul>
               </ProjectExperience>
             </WorkExperienceEmpty>
+          </RightSide>
+        </PageA4>
+        <PageA4>
+          <RightSide>
             <RightTitle>Education</RightTitle>
             <Education
-              scholl="University of Science HoChiMinh City"
-              fieldOfStudy="Information Technology"
-              startDate="2007"
-              endDate="2011"
+                scholl="University of Science HoChiMinh City"
+                fieldOfStudy="Information Technology"
+                startDate="2007"
+                endDate="2011"
             ></Education>
             <RightTitle>Certification</RightTitle>
             <Education
-              scholl="Hybris Commerce V5 Certification"
-              fieldOfStudy="Hybris software"
-              startDate="Jun 2005"
-              endDate="No Expire"
+                scholl="Hybris Commerce V5 Certification"
+                fieldOfStudy="Hybris software"
+                startDate="Jun 2005"
+                endDate="No Expire"
             ></Education>
             <Education
-              scholl="Hybris Core Platform V5 Certification"
-              fieldOfStudy="Hybris software"
-              startDate="Jun 2005"
-              endDate="No Expire"
+                scholl="Hybris Core Platform V5 Certification"
+                fieldOfStudy="Hybris software"
+                startDate="Jun 2005"
+                endDate="No Expire"
             ></Education>
           </RightSide>
         </PageA4>
@@ -398,7 +415,8 @@ const PageA4 = styled.div`
   display: flex;
   font-family: Roboto;
   width: 297mm;
-  height: 420mm;
+  height: 400mm;
+  break-after: page;
 `;
 const Avatar = styled.img`
   width: 250px;
@@ -407,7 +425,7 @@ const Avatar = styled.img`
 `;
 const LeftSide = styled.div`
   flex: 1;
-  height: 100%;
+  height: auto;
   background: #425370;
   color: white;
   > :first-child {
