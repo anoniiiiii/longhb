@@ -70,14 +70,18 @@ export default class CVPage1 extends Component<TProps, TState> {
             <RightTitle>Work experience</RightTitle>
             <WorkExperience position="Senior Developer" company="GFT Technologies" startDate="Jun 2020"
                             endDate="Present" logo={<img src={GFTLogo}></img>}>
-              <ProjectExperience projectName="Mox Digital Bank (https://mox.com/)" techandtools="Python (Pandas, Pynum), AWS (S3, RDS, Athena), Kotlin (Spring), Terraform, Datadog, Airflow, Falcon, Feedzai">
+              <ProjectExperience projectName="Mox Digital Bank (https://mox.com/)" techandtools="Python (Pandas, NumPy), AWS (S3, RDS, Athena, IAM, STS), Kotlin (Spring, Flyway, Test-Containers, MockK, Mockito, MockMVC), Terraform, Datadog, Airflow, Falcon, Feedzai, CircleCI, Spinnaker, Local Stack">
                 <p>
                   A virtual bank backed by Standard Chartered, in partnership with HKT, PCCW and Trip.com. We are the combined power of a well-trusted international banking group, the city’s telecom and lifestyle leader as well as Asia’s largest online travel agency. Mox delivers a suite of retail banking services and lifestyle benefits all in one place, growing your money, your world and your possibilities.
                 </p>
                 <ul>
                   <li>Processing data in datalake for detect fraud and money laundering cases</li>
                   <li>Implement APIs for risk checking</li>
-                  <li>Implement monitoring of logs for check cheating cases and system issue</li>
+                  <li>Implement monitoring of logs for system issue</li>
+                  <li>Tracking and supporting fix production Issue</li>
+                  <li>Writing Unittest, Integration test</li>
+                  <li>DB Migration</li>
+                  <li>Config CI-CD system (CircleCI and Spinnaker)</li>
                 </ul>
               </ProjectExperience>
             </WorkExperience>
@@ -90,7 +94,7 @@ export default class CVPage1 extends Component<TProps, TState> {
             >
               <ProjectExperience
                 projectName="Addy (https://addy.ai/)"
-                techandtools="Python (Pandas, gensim, boto, JWT), AWS, React, Nextjs, Ant Design, Recharts, D3"
+                techandtools="Python (Pandas, gensim, boto, JWT, Spark), AWS (S3, RDS, IAM, STS, StepFunction, Lambda), React, Nextjs, Ant Design, Recharts, D3"
               >
                 <p>
                   Addy automatically organizes the collected information into
@@ -384,13 +388,6 @@ export default class CVPage1 extends Component<TProps, TState> {
         </PageA4>
         <PageA4>
           <RightSide>
-            <RightTitle>Education</RightTitle>
-            <Education
-                scholl="University of Science HoChiMinh City"
-                fieldOfStudy="Information Technology"
-                startDate="2007"
-                endDate="2011"
-            ></Education>
             <RightTitle>Certification</RightTitle>
             <Education
                 scholl="Hybris Commerce V5 Certification"
